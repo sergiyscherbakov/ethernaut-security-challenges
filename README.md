@@ -2,7 +2,8 @@
 
 ## Розробник
 **Сергій Щербаков**
-Email: sergiyscherbakov@ukr.net
+- Email: sergiyscherbakov@ukr.net
+- Telegram: @s_help_2010
 
 ## Опис проекту
 
