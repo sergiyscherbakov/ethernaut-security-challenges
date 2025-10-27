@@ -1,0 +1,24 @@
+# Solidity
+*.swp
+*.swo
+*~
+
+# Remix
+.DS_Store
+.vscode/
+
+# Node
+node_modules/
+package-lock.json
+
+# Build artifacts
+build/
+artifacts/
+cache/
+
+# Environment
+.env
+.env.local
+
+# Text backups
+*.txt.bak
